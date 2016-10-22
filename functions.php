@@ -179,7 +179,7 @@ add_filter('woocommerce_get_price_html', function($price_html, $product) {
    * - Replace text domain placeholder with real text domain
    */
   $note = '<div class="custom_note">';
-  $note .= sprintf(__('Ontvang %s punten', 'lolotte-functions'), (string)floor($product->get_price()));
+  $note .= sprintf(__('Ontvang %s punten', 'text-domain'), (string)floor($product->get_price()));
   $note .= '</div>';
   return $price_html . $note;
 }, 10, 2);
