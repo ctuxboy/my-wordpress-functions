@@ -8,7 +8,7 @@ function theme_enqueue_styles() {
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/Lolotte.png);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/IMAGE.png);
             padding-bottom: 0px;
         }
     </style>
@@ -22,7 +22,7 @@ function my_login_logo_url() {
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 function my_login_logo_url_title() {
-    return 'Lolotte';
+    return 'COMPANY NAME';
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
@@ -69,13 +69,13 @@ function custom_pre_get_posts_query( $q ) {
 }
 
 /* Add SOLD OUT badge */
-/*add_action( 'woocommerce_before_shop_loop_item_title', function() {
+add_action( 'woocommerce_before_shop_loop_item_title', function() {
     global $product;
 
     if ( !$product->is_in_stock() ) {
         echo '<span class="soldout">UITVERKOCHT</span>';
     }
-});*/
+});
 
 // Add script in footer for specific page (winkel pagina)
 function locatie_winkel_wp_footer($pid) { // Custom Google Map in winkel pagina
