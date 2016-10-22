@@ -183,4 +183,11 @@ add_filter('woocommerce_get_price_html', function($price_html, $product) {
   $note .= '</div>';
   return $price_html . $note;
 }, 10, 2);
-?>
+
+// LIMIT REVISIONS IN DIVI THEME
+add_filter( 'wp_revisions_to_keep', 'divi_limit_revisions', 10, 2 );
+
+function divi_limit_revisions( $num ) { 
+ $num = 3;
+ return $num;
+}
